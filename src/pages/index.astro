@@ -11,68 +11,49 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
+    <div class="text-xl py-1">Hola 👋</div>
+    <div class="text-5xl font-bold">Soy Samer Ahmad</div>
+    <div class="text-3xl py-3 font-bold">Diseñador UX/UI</div>
     <div class="py-2">
       <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
+        Apasionado por crear productos digitales significativos que mejoren la vida de las personas. Combino mi experiencia como Ingeniero en Informática con experiencia en desarrollo Frontend para diseñar soluciones holísticas, elegantes y fáciles de usar.
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
+      <a class="btn" href="https://wa.me/56929725411" target="_blank">¡Contáctame!</a>
+      <a href="/CV.pdf" target="_blank" class="btn btn-outline ml-5">
+        Descargar CV
       </a>
     </div>
   </div>
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">Mis últimos proyectos {"</>"}</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Mobile Fit App Design | UX/UI Design"
+    img="/project01.webp"
+    desc="Una app móvil para alcanzar tus objetivos de fitness de manera eficiente mediante rutinas personalizadas segun tus necesidades y metas."
+    url="https://dribbble.com/shots/25527275-Mobile-Fit-App-Design-UX-UI-Design"
     badge="NEW"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    title="Binance Redesign App"
+    img="/project02.webp"
+    desc="Rediseño la app de Binance, creando una experiencia más intuitiva y accesible. Simplifiqué la interfaz y optimicé la gestión de la cartera, priorizando la seguridad y claridad. ¡Más amigable para todos!"
+    url="https://dribbble.com/shots/24313431-Binance-Redesign-App"
+    badge="NEW"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
+    title="Ipad Pro Landing Page"
+    img="/project03.webp"
+    desc="Landing page del iPad Pro con formato Bento, creando una experiencia más atractiva e inmersiva. Organizando la información en bloques concisos, destaqué las características clave del producto y optimicé la experiencia para una mejor conversión."
+    url="https://dribbble.com/shots/23112624-Day-3-Landing-Page-DailyUI"
+    badge="NEW"
   />
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
 
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
 </BaseLayout>
